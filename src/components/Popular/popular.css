@@ -1,0 +1,205 @@
+.popular{
+    padding-top: 15rem;
+    .secContainer{
+        .secHeader{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            .textDiv{
+                .secTitle{
+                    color:black;
+                    line-height: 1.5rem;
+                    padding-bottom: 1rem;
+                }
+                p{
+                    font-size: 13px;
+                    color:rgb(55, 54, 54) ;
+                    font-weight: 500;
+                }
+            }
+            .iconDiv{
+                
+                /* flex-direction: row;
+                 align-items: flex-start;
+                 gap:2rem; */ /* ça ne marche pas je ne sais pas pourquoi??? trouvons ensemble la solution*/
+                .icon{
+                    gap:2rem;
+
+                    padding:0.5rem;
+                    background: rgb(70, 67, 67);
+                    border-radius: 50%;
+                    font-size: 2.5rem;
+                    &:hover{
+                        background:black ;
+                        color: white;
+                    }
+                }
+                .leftIcon{
+                    background: black;
+                }
+            }
+        }
+        .mainContent{
+            display: flex;
+            flex-wrap:nowrap;
+            padding: 2rem 0;
+            gap: 1rem;
+            .singleDestination{
+                box-shadow: 2px 2px 2px 2px rgb(208, 229, 237);
+                overflow: hidden;
+                border-radius: 1rem;
+              .destImage{
+                height: 200px;
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .overlayInfo{
+                    position: absolute;
+                    display: flex;
+                    align-items: flex-start;
+                    padding: 0;
+                    justify-content: center;
+                    flex-direction: column;
+                    background:linear-gradient(rgb(0,0,0),rgb(0,0,0));
+                    bottom: 0;
+                    width: 100%;
+                    height: 0;
+                    overflow: hidden;
+                    h3{
+                        color: white;
+                        font-weight: 600;
+                    }
+                    p{
+                        color: white;
+                        opacity: 0.7;
+                        font-size: 13px;
+                    }
+                    .icon{
+                     
+                        position: absolute;
+                        right: 10px;
+                        bottom: 10px;
+                        padding: 0.5rem;
+                        background: orange;
+                        font-size: 2.5rem;
+                        border-radius: 50%;
+                        color:white ;
+                        border:1px solid transparent ;
+                        transition: .3s ease;
+                        &:hover{
+                            background: black;
+                            border: 1px solid orange;
+                            color: orange;
+
+                        }
+
+                    }
+                }
+              } 
+              .destFooter{
+                 padding: 1rem;
+                 .number{
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: black;
+                    position: relative;
+                    width: max-content;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        background: orange;
+                        top: 45%;
+                        right: -150%;
+                        height: 5px;
+                        width: 45px;
+                        border-radius: 1rem;
+                    }
+                 }
+                 .destText{
+                    justify-content: space-between;
+                    h6{
+                        color: black;
+                        font-size: 15px;
+                    }
+                    .flex{
+                        font-size: 16px;
+                        font-weight: 600;
+                        align-items: flex-start;
+                        transform: translateY(5px);
+                        .icon{
+                            color:orange
+                        }
+
+                    }
+                 }
+              } 
+       &:hover{
+        .overlayInfo{
+            overflow: visible;
+            padding: 1rem 1.5rem;
+            height: 100%;
+        }
+       }
+
+            }
+        }
+    }
+}
+@media screen and (min-width:480px) {
+    .popular{
+        padding-top: 10rem;
+    }
+  }
+  @media screen and (min-width:556px) {
+  .popular{
+    .secContainer{
+        .secHeader{
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .textDiv{
+                text-align: start;
+                max-width: 70%;
+            }
+            .iconsDiv{
+                justify-content: flex-end;
+            }
+        }
+        
+    }
+  }
+}
+@media screen and (min-width:720px) {
+    .popular{
+        padding-top:7rem ;
+   
+    }
+  }
+  @media screen and (max-width:1024px) {
+    .popular{
+        padding-top:10rem ;
+        .secContainer{
+            .secHeader{
+                .textDiv{
+                    .secTitle{
+                        font-size: 2.2rem;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+            .mainContent{
+                grid-template-columns: repeat(4,1fr);
+                gap: 1.5rem !important;
+            }
+        }
+   
+    }
+  }
